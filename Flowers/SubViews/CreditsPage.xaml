@@ -1,0 +1,45 @@
+﻿<Page x:Class="Flowers.SubViews.CreditsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      
+      MaxHeight="500" Height="Auto" Width="350">
+
+    <Grid Background="{StaticResource FlyoutBackground}">
+        <StackPanel Margin="15">
+            <Image Source="/Resources/ESPOCH.png" Height="80" Margin="0, 0, 0, 20"/>
+            <TextBlock Margin="0, 5">
+                <Run FontWeight="SemiBold">CARRERA:</Run>
+                <LineBreak />
+                <Run >TECNOLOGÍAS DE LA INFORMACIÓN</Run>
+            </TextBlock>
+            <TextBlock Margin="0, 5">
+                <Run FontWeight="SemiBold">CURSO:</Run>
+                <LineBreak />
+                <Run >******* '*'</Run>
+            </TextBlock>
+            <TextBlock Margin="0, 5">
+                <Run FontWeight="SemiBold">ASIGNATURA:</Run>
+                <LineBreak />
+                <Run >*********** ** **** ** *****</Run>
+            </TextBlock>
+            <TextBlock Margin="0, 5">
+                <Run FontWeight="SemiBold">DOCENTE:</Run>
+                <LineBreak />
+                <Run >ING. ******* *******</Run>
+            </TextBlock>
+            <TextBlock Margin="0, 5">
+                <Run FontWeight="SemiBold">INTEGRANTES:</Run>
+                <LineBreak />
+                <Run >- RICARDO CARRION</Run>
+                <LineBreak/>
+                <Run>- ****** ****</Run>
+                <LineBreak/>
+                <Run >- ***** ********</Run>
+            </TextBlock>
+            <Rectangle Fill="#ce1d17" Height="10" Margin="0, 20, 0, 0"/>
+        </StackPanel>
+    </Grid>
+</Page>

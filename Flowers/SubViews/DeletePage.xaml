@@ -1,0 +1,36 @@
+﻿<controls:AeroPage
+    x:Class="Flowers.SubViews.DeletePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:controls="clr-namespace:Flowers.Controls"
+    mc:Ignorable="d"
+      
+    Background="{StaticResource FlyoutBackground}"
+    MaxHeight="500" Height="Auto" Width="350" Loaded="OnLoaded">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Style="{StaticResource BodyStrongTextBlockStyle}" TextAlignment="Center"
+                   Text="Eliminar Pago"/>
+        <StackPanel Grid.Row="1" Margin="0, 25">
+            <TextBlock Margin="0, 0, 0, 5" Style="{StaticResource PlaceholderTextBlockStyle}">
+                <Run >Id de la transacción</Run>
+                <Run Foreground="Red">*</Run>
+            </TextBlock>
+            <TextBox MaxLength="50" Tag="Requested"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Width="135" Margin="0, 0, 25, 0" Click="AcceptButton_Click" IsDefault="True"
+                    Content="Aceptar"/>
+            <Button Width="135" Margin="25, 0, 0, 0" Click="CancelButton_Click"
+                    Content="Cancelar"/>
+        </StackPanel>
+    </Grid>
+</controls:AeroPage>

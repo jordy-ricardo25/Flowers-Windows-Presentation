@@ -1,0 +1,37 @@
+[
+  {
+    "Title": "Ejercicio 1",
+    "Description": "Devolver un listado con el código de pedido, código de cliente, fecha esperada y fecha de entrega de los pedidos que no han sido entregados a tiempo.",
+    "Index": "1"
+  },
+  {
+    "Title": "Ejercicio 2",
+    "Description": "Devolver un listado de las diferentes gamas de producto que ha comprado cada cliente.",
+    "Index": "2"
+  },
+  {
+    "Title": "Ejercicio 3",
+    "Description": "Devolver un listado que muestre solamente los empleados que no tienen una oficina asociada.",
+    "Index": "3"
+  },
+  {
+    "Title": "Ejercicio 4",
+    "Description": "La facturación que ha tenido la empresa en toda la historia, indicando la base imponible, el IVA y el total facturado. La base imponible se calcula sumando el coste del producto por el número de unidades vendidas de la tabla detalle_pedido. El IVA es el 21 % de la base imponible, y el total la suma de los dos campos anteriores.",
+    "Index": "4"
+  },
+  {
+    "Title": "Ejercicio 5",
+    "Description": "La misma información que en la pregunta anterior, pero agrupada por código de producto.",
+    "Index": "5"
+  },
+  {
+    "Title": "Ejercicio 6",
+    "Description": "Devolver el nombre del producto que tenga el precio de venta más caro.",
+    "Index": "6"
+  },
+  {
+    "Title": "Ejercicio 7",
+    "Description": "Devolver el nombre del cliente, el nombre y primer apellido de su representante de ventas y el número de teléfono de la oficina del representante de ventas, de aquellos clientes que no hayan realizado ningún pago.",
+    "Index": "7"
+  }
+]

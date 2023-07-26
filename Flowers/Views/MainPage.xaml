@@ -1,0 +1,89 @@
+﻿<controls:AeroPage
+    x:Class="Flowers.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:msb="http://ui.msb-studios.com/winfx/xaml"
+    xmlns:controls="clr-namespace:Flowers.Controls"
+    xmlns:subviews="clr-namespace:Flowers.SubViews"
+    xmlns:views="clr-namespace:Flowers.Views"
+    mc:Ignorable="d"
+      
+    d:DesignHeight="550" d:DesignWidth="900" Loaded="OnLoaded">
+
+    <msb:NavigationView Background="{DynamicResource ApplicationGradientBrush}" IsActingAsTitleBar="True" CustomContentPlacement="Bottom"
+                        SelectionChanged="OnSelectionChanged">
+        <msb:NavigationView.PaneHeader>
+            <StackPanel Margin="20, 0" VerticalAlignment="Center" Orientation="Horizontal">
+                <Image Width="25" Height="25" Margin="0, 0, 10, 0">
+                    <Image.Source>
+                        <BitmapImage DecodePixelWidth="30" DecodePixelHeight="30" UriSource="/Flowers.ico"/>
+                    </Image.Source>
+                </Image>
+                <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiBold" Foreground="#262930"
+                           Text="Flowers"/>
+            </StackPanel>
+        </msb:NavigationView.PaneHeader>
+        <msb:NavigationView.MenuItems>
+            <msb:NavigationViewItem Content="Inicio" SourcePageType="views:HomePage">
+                <msb:NavigationViewItem.Icon>
+                    <msb:ImageIcon Margin="11" Source="{StaticResource Images.Home}"/>
+                </msb:NavigationViewItem.Icon>
+            </msb:NavigationViewItem>
+            <msb:NavigationViewItem Content="Ejercicio 1" SourcePageType="views:ExercisePage" Tag="1">
+                <msb:NavigationViewItem.Icon>
+                    <msb:ImageIcon Margin="12, 9, 6, 9" Source="{StaticResource Images.One}"/>
+                </msb:NavigationViewItem.Icon>
+            </msb:NavigationViewItem>
+            <msb:NavigationViewItem Content="Ejercicio 2" SourcePageType="views:ExercisePage" Tag="2">
+                <msb:NavigationViewItem.Icon>
+                    <msb:ImageIcon Margin="12, 9, 6, 9" Source="{StaticResource Images.Two}"/>
+                </msb:NavigationViewItem.Icon>
+            </msb:NavigationViewItem>
+            <msb:NavigationViewItem Content="Ejercicio 3" SourcePageType="views:ExercisePage" Tag="3">
+                <msb:NavigationViewItem.Icon>
+                    <msb:ImageIcon Margin="12, 9, 6, 9" Source="{StaticResource Images.Three}"/>
+                </msb:NavigationViewItem.Icon>
+            </msb:NavigationViewItem>
+            <msb:NavigationViewItem Content="Ejercicio 4" SourcePageType="views:ExercisePage" Tag="4">
+                <msb:NavigationViewItem.Icon>
+                    <msb:ImageIcon Margin="12, 9, 6, 9" Source="{StaticResource Images.Four}"/>
+                </msb:NavigationViewItem.Icon>
+            </msb:NavigationViewItem>
+            <msb:NavigationViewItem Content="Ejercicio 5" SourcePageType="views:ExercisePage" Tag="5">
+                <msb:NavigationViewItem.Icon>
+                    <msb:ImageIcon Margin="12, 9, 6, 9" Source="{StaticResource Images.Five}"/>
+                </msb:NavigationViewItem.Icon>
+            </msb:NavigationViewItem>
+            <msb:NavigationViewItem Content="Ejercicio 6" SourcePageType="views:ExercisePage" Tag="6">
+                <msb:NavigationViewItem.Icon>
+                    <msb:ImageIcon Margin="12, 9, 6, 9" Source="{StaticResource Images.Six}"/>
+                </msb:NavigationViewItem.Icon>
+            </msb:NavigationViewItem>
+            <msb:NavigationViewItem Content="Ejercicio 7" SourcePageType="views:ExercisePage" Tag="7">
+                <msb:NavigationViewItem.Icon>
+                    <msb:ImageIcon Margin="12, 9, 6, 9" Source="{StaticResource Images.Seven}"/>
+                </msb:NavigationViewItem.Icon>
+            </msb:NavigationViewItem>
+        </msb:NavigationView.MenuItems>
+        <msb:NavigationView.PaneCustomContent>
+            <StackPanel Margin="0, 42, 0, 2">
+                <msb:AppBarButton Style="{StaticResource NavigationAppBarButtonStyle}" Tag="{x:Type subviews:InsertPage}"
+                                  Label="Insertar">
+                    <msb:ImageIcon Margin="11" Source="{StaticResource Images.Insert}"/>
+                </msb:AppBarButton>
+                <msb:AppBarButton Style="{StaticResource NavigationAppBarButtonStyle}" Tag="{x:Type subviews:UpdatePage}"
+                                  Label="Actualizar">
+                    <msb:ImageIcon Margin="11" Source="{StaticResource Images.Update}"/>
+                </msb:AppBarButton>
+                <msb:AppBarButton Style="{StaticResource NavigationAppBarButtonStyle}" Tag="{x:Type subviews:DeletePage}"
+                                  Label="Eliminar" Click="NavigationButton_Click">
+                    <msb:ImageIcon Margin="11" Source="{StaticResource Images.Delete}"/>
+                </msb:AppBarButton>
+            </StackPanel>
+        </msb:NavigationView.PaneCustomContent>
+
+        <controls:AeroFrame />
+    </msb:NavigationView>
+</controls:AeroPage>

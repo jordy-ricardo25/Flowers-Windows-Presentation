@@ -1,0 +1,82 @@
+﻿<controls:AeroPage
+    x:Class="Flowers.SubViews.UpdatePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:controls="clr-namespace:Flowers.Controls"
+    xmlns:helpers="clr-namespace:Flowers.Helpers"
+    mc:Ignorable="d"
+      
+    Background="{StaticResource FlyoutBackground}"
+    MaxHeight="500" Height="Auto" Width="350" Loaded="OnLoaded">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Style="{StaticResource BodyStrongTextBlockStyle}" TextAlignment="Center"
+                   Text="Actualizar Empleado"/>
+        <ScrollViewer Grid.Row="1" Margin="0, 25">
+            <StackPanel >
+                <TextBlock Margin="0, 0, 0, 5" Style="{StaticResource PlaceholderTextBlockStyle}">
+                    <Run >Código de empleado</Run>
+                    <Run Foreground="Red">*</Run>
+                </TextBlock>
+                <StackPanel Orientation="Horizontal" IsEnabled="True">
+                    <TextBox Width="210" Margin="0, 0, 10, 0" MaxLength="11" Tag="Requested" helpers:InputValidator.InputType="Integer"/>
+                    <Button Width="70" Margin="10, 0, 0, 0" Click="SearchButton_Click" Content="Buscar"/>
+                </StackPanel>
+                <Separator Margin="0, 25"/>
+                <StackPanel IsEnabled="False">
+                    <TextBlock Margin="0, 0, 0, 5" Style="{StaticResource PlaceholderTextBlockStyle}">
+                        <Run >Nombre</Run>
+                        <Run Foreground="Red">*</Run>
+                    </TextBlock>
+                    <TextBox MaxLength="50" Tag="Requested"/>
+                    <TextBlock Margin="0, 10, 0, 5" Style="{StaticResource PlaceholderTextBlockStyle}">
+                        <Run >Apellido 1</Run>
+                        <Run Foreground="Red">*</Run>
+                    </TextBlock>
+                    <TextBox MaxLength="50" Tag="Requested"/>
+                    <TextBlock Margin="0, 10, 0, 5" Style="{StaticResource PlaceholderTextBlockStyle}">
+                        <Run >Apellido 2</Run>
+                    </TextBlock>
+                    <TextBox MaxLength="50"/>
+                    <TextBlock Margin="0, 10, 0, 5" Style="{StaticResource PlaceholderTextBlockStyle}">
+                        <Run >Extensión</Run>
+                        <Run Foreground="Red">*</Run>
+                    </TextBlock>
+                    <TextBox MaxLength="10" Tag="Requested"/>
+                    <TextBlock Margin="0, 10, 0, 5" Style="{StaticResource PlaceholderTextBlockStyle}">
+                        <Run >Email</Run>
+                        <Run Foreground="Red">*</Run>
+                    </TextBlock>
+                    <TextBox MaxLength="100" Tag="Requested"/>
+                    <TextBlock Margin="0, 10, 0, 5" Style="{StaticResource PlaceholderTextBlockStyle}">
+                        <Run >Código oficina</Run>
+                    </TextBlock>
+                    <TextBox MaxLength="10"/>
+                    <TextBlock Margin="0, 10, 0, 5" Style="{StaticResource PlaceholderTextBlockStyle}">
+                        <Run >Código del jefe</Run>
+                    </TextBlock>
+                    <TextBox MaxLength="11" helpers:InputValidator.InputType="Integer"/>
+                    <TextBlock Margin="0, 10, 0, 5" Style="{StaticResource PlaceholderTextBlockStyle}">
+                        <Run >Puesto</Run>
+                        <Run Foreground="Red">*</Run>
+                    </TextBlock>
+                    <TextBox MaxLength="50" Tag="Requested"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Width="135" Margin="0, 0, 25, 0" Click="AcceptButton_Click" IsDefault="True"
+                    Content="Aceptar"/>
+            <Button Width="135" Margin="25, 0, 0, 0" Click="CancelButton_Click"
+                    Content="Cancelar"/>
+        </StackPanel>
+    </Grid>
+</controls:AeroPage>

@@ -1,0 +1,44 @@
+﻿<controls:AeroPage
+    x:Class="Flowers.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:controls="clr-namespace:Flowers.Controls"
+    mc:Ignorable="d"
+      
+    d:DesignHeight="550" d:DesignWidth="600">
+
+    <Grid Background="{StaticResource ApplicationGradientBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Style="{StaticResource ShowCreditsButtonStyle}" Content="Ver Créditos"
+                Click="ShowCreditsButton_Click"/>
+        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="/Resources/Ecology.png" HorizontalAlignment="Center"/>
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0, 0, 0, 60">
+                <Ellipse Style="{StaticResource UserImageEllipseStyle}">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/Resources/Ricardo.jpg"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Style="{StaticResource UserImageEllipseStyle}" Margin="60, 0, 0, 0">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/Resources/Mattias.jpg"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Style="{StaticResource UserImageEllipseStyle}" Margin="120, 0, 0, 0">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/Resources/Mike.jpg"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Grid>
+        </Grid>
+        <TextBlock Grid.Row="2" Margin="15, 10" HorizontalAlignment="Right" Style="{StaticResource PlaceholderTextBlockStyle}"
+                   Text="© MSB Studios 2023 - 2024"/>
+    </Grid>
+</controls:AeroPage>
