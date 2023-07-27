@@ -39,6 +39,8 @@
 	<Resource Include="Resources\Ricardo.jpg" />
 	<Resource Include="Resources\User.png" />
 	<Resource Include="Resources\Woman.png" />
+	<None Include="..\LICENSE.txt"/>
+	<None Include="..\README.md"/>
   </ItemGroup>
 
 </Project>
